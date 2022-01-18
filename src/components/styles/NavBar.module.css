@@ -1,0 +1,11 @@
+.nav {
+  color: white;
+  margin-left: 2px;
+  grid-area: nav;
+  background-color: greenyellow;
+}
+
+.active {
+  color: gold;
+  font-style: oblique;
+}
