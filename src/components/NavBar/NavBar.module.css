@@ -1,11 +1,14 @@
 .nav {
-  color: white;
+  color: grey;
   margin-left: 2px;
+  padding-left: 10px;
   grid-area: nav;
-  background-color: greenyellow;
+  background-color: rgb(197, 243, 196);
+  border-radius: 10px;
 }
 
 .active {
-  color: gold;
-  font-style: oblique;
+  border-color: grey;
+  font-style: unset;
+  color: rgb(38, 0, 255);
 }

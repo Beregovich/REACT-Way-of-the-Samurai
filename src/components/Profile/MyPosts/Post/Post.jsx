@@ -16,7 +16,7 @@ const Post = (props) => {
                 setLikes(likes + 1)
             }
             }>
-                {likes}
+                likes: {likes}
             </button>
         </div>
     );
