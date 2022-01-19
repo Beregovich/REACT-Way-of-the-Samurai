@@ -5,11 +5,9 @@ import Post from './Post/Post';
 const MyPosts = () => {
     return (
         <div className={classes.posts}>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            <Post name="Vasya" message="I'am Vasya, Hi!" />
+            <Post name="Petya" message="I'am Petya, Hi!" />
+            <Post name="Kolya" message="I'am Kolya, Hi!" />
         </div>
 
 
