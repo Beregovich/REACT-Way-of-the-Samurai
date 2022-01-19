@@ -3,14 +3,17 @@ import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
-import MyPosts from './components/Profile/MyPosts/MyPosts';
+import Dialogs from './components/Dialogs/Dialogs';
 
 function App() {
   return (
     <div className="app-wrapper">
-      <Header />;
-      <NavBar />;
-      <Profile />;
+      <Header />
+      <NavBar />
+      <div>
+        <Profile />
+        <Dialogs />
+      </div>
     </div>
   );
 }
