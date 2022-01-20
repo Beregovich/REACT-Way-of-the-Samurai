@@ -9,6 +9,6 @@
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
 }
-.content {
+.app-wrapper-content {
   grid-area: content;
 }
