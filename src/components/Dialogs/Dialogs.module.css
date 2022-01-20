@@ -1,8 +1,21 @@
 .dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
   color: grey;
   font-family: "Times New Roman", Times, serif;
 }
 
-.dialogs img {
+.dialogItems {
   max-height: 600px;
+}
+
+.messages {
+}
+
+.messages .message {
+  color: black;
+}
+
+.active {
+  color: grey;
 }
