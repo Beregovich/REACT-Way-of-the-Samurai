@@ -5,19 +5,19 @@ function NavBar() {
     return (
         <nav className={classes.nav}>
             <div className={classes.active}>
-                <a>Profile</a>
+                <a href='/Profile'>Profile</a>
             </div>
             <div>
-                <a>Messages</a>
+                <a href='/Messages'>Messages</a>
             </div>
             <div>
-                <a>News</a>
+                <a href='/News'>News</a>
             </div>
             <div>
-                <a>Music</a>
+                <a href='/Music'>Music</a>
             </div>
             <div>
-                <a>Settings</a>
+                <a href='/Settings'>Settings</a>
             </div>
         </nav>
     )
