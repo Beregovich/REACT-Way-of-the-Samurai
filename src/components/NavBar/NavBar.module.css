@@ -5,10 +5,14 @@
   grid-area: nav;
   background-color: rgb(197, 243, 196);
   border-radius: 10px;
+  text-decoration: none;
 }
 
-.active {
-  border-color: grey;
+.navLink {
+  color: white;
   font-style: unset;
-  color: rgb(38, 0, 255);
+}
+.active {
+  font-style: unset;
+  color: grey;
 }
