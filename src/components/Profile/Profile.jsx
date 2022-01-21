@@ -10,7 +10,6 @@ let posts = [
 ]
 
 function Profile(props) {
-
     return (
         <div className={classes.content}>
             <ProfileInfo />
