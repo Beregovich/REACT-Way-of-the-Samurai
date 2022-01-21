@@ -3,11 +3,18 @@ import classes from './Content.module.css';
 import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProdileInfo';
 
-function Profile() {
+let posts = [
+    { id: 1, name: "Vasya", message: "I'am Vasya, Hi!" },
+    { id: 2, name: "Petya", message: "I'am Petya, Hi!" },
+    { id: 3, name: "Kolya", message: "I'am Kolya, Hi!" },
+]
+
+function Profile(props) {
+
     return (
         <div className={classes.content}>
             <ProfileInfo />
-            <MyPosts />
+            <MyPosts posts={posts} />
         </div>
 
     )
