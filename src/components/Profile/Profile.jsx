@@ -13,10 +13,15 @@ function Profile(props) {
     return (
         <div className={classes.content}>
             <ProfileInfo />
-            <MyPosts posts={props.posts} addPost={props.addPost} />
+            <MyPosts
+                updateNewPostText={props.updateNewPostText}
+                posts={props.posts}
+                addPost={props.addPost}
+                newPostText={props.newPostText}
+            />
+
         </div>
 
     )
 }
-
 export default Profile;

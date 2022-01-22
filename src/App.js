@@ -19,7 +19,10 @@ function App(props) {
           <Routes>
             <Route path='/' element={<Profile
               posts={props.state.profilePage.posts}
-              addPost={props.addPost} />}
+              addPost={props.addPost}
+              newPostText={props.state.profilePage.newPostText}
+              updateNewPostText={props.updateNewPostText}
+            />}
             />
             <Route path='/dialogs/*' element={<Dialogs
               messages={props.state.dialogsPage.messages}
@@ -27,7 +30,10 @@ function App(props) {
             />
             <Route path='/profile' element={<Profile
               posts={props.state.profilePage.posts}
-              addPost={props.addPost} />}
+              addPost={props.addPost}
+              newPostText={props.state.profilePage.newPostText}
+              updateNewPostText={props.updateNewPostText}
+            />}
             />
             <Route path='/music' element={<Music />} />
             <Route path='/news' element={<News />} />
@@ -38,5 +44,4 @@ function App(props) {
     </BrowserRouter>
   );
 }
-
 export default App;
