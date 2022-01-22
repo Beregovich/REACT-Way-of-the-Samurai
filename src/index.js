@@ -5,7 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './redux/state';
 import { addPost } from './redux/state';
+import { renderTree } from './render';
 
+renderTree(state);
+/*
 ReactDOM.render(
   <React.StrictMode>
     <App state={state} addPost={addPost} />
@@ -14,3 +17,4 @@ ReactDOM.render(
 );
 
 reportWebVitals();
+*/
