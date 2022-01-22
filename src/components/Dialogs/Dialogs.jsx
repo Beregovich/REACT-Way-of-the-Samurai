@@ -13,14 +13,21 @@ const Dialogs = (props) => {
         m => <Message id={m.id} message={m.message} />
     )
 
+    let newMessageElement = React.createRef();
+    let sendMessage = () => {
+        alert(newMessageElement.current.value)
+    }
     return (
         <div className={classes.dialogs}>
+
             <div className={classes.dialogsItems}>
                 {dialogsElements}
             </div>
             <div className={classes.messages}>
                 {messagesElements}
             </div>
+            <textarea ref={newMessageElement}></textarea>
+            <button onClick={sendMessage}>Отправить</button>
         </div>
     )
 }
