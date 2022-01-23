@@ -1,4 +1,3 @@
-import { renderTree } from '../render';
 
 let state = {
     profilePage: {
@@ -33,13 +32,13 @@ export let addPost = () => {
     };
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = "";
-    renderTree(state);
+    //renderTree(state);
 }
 
 export let updateNewPostText = (newText) => {
 
     state.profilePage.newPostText = newText;
-    renderTree(state);
+    //renderTree(state);
 }
 
 export default state;
