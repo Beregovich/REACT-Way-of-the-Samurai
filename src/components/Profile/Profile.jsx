@@ -14,9 +14,8 @@ function Profile(props) {
         <div className={classes.content}>
             <ProfileInfo />
             <MyPosts
-                updateNewPostText={props.updateNewPostText}
+                dispatch={props.dispatch}
                 posts={props.posts}
-                addPost={props.addPost}
                 newPostText={props.newPostText}
             />
 

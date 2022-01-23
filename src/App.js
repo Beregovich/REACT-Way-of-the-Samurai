@@ -19,9 +19,8 @@ function App(props) {
           <Routes>
             <Route path='/' element={<Profile
               posts={props.state.profilePage.posts}
-              addPost={props.addPost}
+              dispatch={props.dispatch}
               newPostText={props.state.profilePage.newPostText}
-              updateNewPostText={props.updateNewPostText}
             />}
             />
             <Route path='/dialogs/*' element={<Dialogs
@@ -30,9 +29,8 @@ function App(props) {
             />
             <Route path='/profile' element={<Profile
               posts={props.state.profilePage.posts}
-              addPost={props.addPost}
+              dispatch={props.dispatch}
               newPostText={props.state.profilePage.newPostText}
-              updateNewPostText={props.updateNewPostText}
             />}
             />
             <Route path='/music' element={<Music />} />
