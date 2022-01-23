@@ -1,3 +1,6 @@
+let renderTree = () => {
+    console.log('update state')
+}
 
 let state = {
     profilePage: {
@@ -24,7 +27,7 @@ let state = {
     }
 }
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -32,13 +35,17 @@ export let addPost = () => {
     };
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = "";
-    //renderTree(state);
+    renderTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
 
     state.profilePage.newPostText = newText;
-    //renderTree(state);
+    renderTree(state);
 }
 
-export default state;
+export const subscribe = (observer) => {
+    renderTree = observer
+}
+
+export default state; 
