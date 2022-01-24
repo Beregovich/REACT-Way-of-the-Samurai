@@ -79,7 +79,7 @@ let store = {
         } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._updateNewPostText(action.newText);
         } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._updateNewMessageBody(action.newMessage)
+            this._updateNewMessageBody(action.body)
         } else if (action.type === SEND_MESSAGE) {
             this._sendMessage();
         }

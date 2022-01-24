@@ -10,6 +10,7 @@ import Settings from './components/Settings/Settings';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App(props) {
+
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -24,8 +25,11 @@ function App(props) {
             />}
             />
             <Route path='/dialogs/*' element={<Dialogs
-              messages={props.state.dialogsPage.messages}
-              dialogs={props.state.dialogsPage.dialogs} />}
+              newMessageBody={props.state.dialogsPage.newMessageBody}
+              messages={props.state.dialogsPage._messages}
+              dialogs={props.state.dialogsPage.dialogs}
+              dispatch={props.dispatch}
+            />}
             />
             <Route path='/profile' element={<Profile
               posts={props.state.profilePage.posts}
