@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //import state from './redux/state';
 //import { addPost, updateNewPostText, subscribe } from './redux/state';
-import store from './redux/state';
+import store from './redux/redux-store';
 
 let renderTree = (state) => {
 
@@ -36,5 +36,10 @@ let renderTree = (state) => {
 }*/
 
 renderTree(store.getState());
-store.subscribe(renderTree);
+
+store.subscribe(() => {
+  let state = store.getState();
+  renderTree(state);
+});
+
 reportWebVitals();
