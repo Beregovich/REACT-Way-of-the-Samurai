@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 import Music from './components/Music/Music';
 import News from './components/News/News';
 import Settings from './components/Settings/Settings';
@@ -24,11 +24,7 @@ function App(props) {
               store={props.store}
             />}
             />
-            <Route path='/dialogs/*' element={<Dialogs
-              newMessageBody={props.state.dialogsPage.newMessageBody}
-              messages={props.state.dialogsPage.messages}
-              dialogs={props.state.dialogsPage.dialogs}
-              dispatch={props.dispatch}
+            <Route path='/dialogs/*' element={<DialogsContainer
               store={props.store}
             />}
             />
