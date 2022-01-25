@@ -3,6 +3,7 @@ import { updateNewMessageBodyCreator, sendMessageCreator } from '../../redux/dia
 import Dialogs from './Dialogs'
 
 const DialogsContainer = (props) => {
+
     let state = props.store.getState().dialogsPage;
 
     let onSendMessageClick = () => {
@@ -11,12 +12,12 @@ const DialogsContainer = (props) => {
     let onNewMessageChange = (body) => {
         props.store.dispatch(updateNewMessageBodyCreator(body))
     }
-
     return (
         <Dialogs
             updateNewMessageBody={onNewMessageChange}
             sendMessage={onSendMessageClick}
             dialogsPage={state}
+            newMessageBody={state.newMessageBody}
         />
     )
 }

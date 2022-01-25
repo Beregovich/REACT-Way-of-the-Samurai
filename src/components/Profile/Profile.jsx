@@ -8,7 +8,6 @@ function Profile(props) {
         <div className={classes.content}>
             <ProfileInfo />
             <MyPostsContainer
-                dispatch={props.dispatch}
                 store={props.store}
             />
 

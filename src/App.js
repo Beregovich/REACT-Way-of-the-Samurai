@@ -18,9 +18,6 @@ function App(props) {
         <div className='app-wrapper-content'>
           <Routes>
             <Route path='/' element={<Profile
-              posts={props.state.profilePage.posts}
-              dispatch={props.dispatch}
-              newPostText={props.state.profilePage.newPostText}
               store={props.store}
             />}
             />
@@ -29,9 +26,6 @@ function App(props) {
             />}
             />
             <Route path='/profile' element={<Profile
-              posts={props.state.profilePage.posts}
-              dispatch={props.dispatch}
-              newPostText={props.state.profilePage.newPostText}
               store={props.store}
             />}
             />
