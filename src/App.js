@@ -21,6 +21,7 @@ function App(props) {
               posts={props.state.profilePage.posts}
               dispatch={props.dispatch}
               newPostText={props.state.profilePage.newPostText}
+              store={props.store}
             />}
             />
             <Route path='/dialogs/*' element={<Dialogs
@@ -28,12 +29,14 @@ function App(props) {
               messages={props.state.dialogsPage.messages}
               dialogs={props.state.dialogsPage.dialogs}
               dispatch={props.dispatch}
+              store={props.store}
             />}
             />
             <Route path='/profile' element={<Profile
               posts={props.state.profilePage.posts}
               dispatch={props.dispatch}
               newPostText={props.state.profilePage.newPostText}
+              store={props.store}
             />}
             />
             <Route path='/music' element={<Music />} />
