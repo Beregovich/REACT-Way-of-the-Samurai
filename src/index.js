@@ -7,23 +7,23 @@ import store from './redux/redux-store';
 import { Provider } from 'react-redux';
 
 
-let renderTree = () => {
+//let renderTree = () => {
 
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>,
-    </Provider>,
-    document.getElementById('root')
-  )
-}
+ReactDOM.render(
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  </Provider>,
+  document.getElementById('root')
+)
+/*}
 
 renderTree();
 
 store.subscribe(() => {
   renderTree();
-});
+});*/
 
 reportWebVitals();
