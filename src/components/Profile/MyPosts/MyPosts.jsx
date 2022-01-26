@@ -6,7 +6,7 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
     let postsElements = props.posts.map(
-        (p) => <Post name={p.name} message={p.message} />
+        (p) => <Post name={p.name} message={p.message} key={p.id} />
     )
 
     let onPostChange = (p) => {
