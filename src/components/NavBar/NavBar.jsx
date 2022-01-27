@@ -13,7 +13,7 @@ function NavBar() {
                 <NavLink to='/Dialogs' className={navData => navData.isActive ? classes.active : classes.navLink}>Messages</NavLink>
             </div>
             <div className={classes.navLink}>
-                <NavLink to='/Users' className={navData => navData.isActive ? classes.active : classes.navLink}>Users</NavLink>
+                <NavLink to='/users' className={navData => navData.isActive ? classes.active : classes.navLink}>Users</NavLink>
             </div>
             <div className={classes.navLink}>
                 <NavLink to='/News' className={navData => navData.isActive ? classes.active : classes.navLink}>News</NavLink>

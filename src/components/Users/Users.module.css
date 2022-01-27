@@ -1,0 +1,9 @@
+.users {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.content img {
+  border-radius: 50px;
+  margin-left: 10px;
+  height: 400px;
+}
