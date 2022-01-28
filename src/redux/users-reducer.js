@@ -46,9 +46,8 @@ export const usersReducer = (state = initialState, action) => {
             }
         case SET_USERS:
             return {
-
                 ...state,
-                users: [...state.users, ...action.users]
+                users: [...state.users, ...action.users.data]
             }
 
         default: return state
