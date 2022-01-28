@@ -3,32 +3,32 @@ import classes from './Users.module.css';
 import * as axios from 'axios';
 import userAvatar from '../../assets/images/ava.png'
 
-const Users = (props) => {
-    let getUsers = () => {
-        if (props.users.length === 0) {
-            axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
-                props.setUsers(response)
-            }
-            )
-        }
-    }
 
-    return (
-        <div className={classes.users}>
+class Users extends React.Component {
+
+    constructor(props) {
+        super(props);
+        axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
+            this.props.setUsers(response)
+        }
+        )
+
+    }
+    render() {
+        return <div className={classes.users}>
             <h4>USERS</h4>
-            <button onClick={getUsers}>getUsers</button>
-            {props.users.map(u =>
+            {this.props.users.map(u =>
                 <div key={u.id} className={classes.user}>
                     <span>
                         <div>
                             <img src={userAvatar} />
                         </div>
                         <div>{/*
-                            {u.followed
-                                ? <button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>
-                                : <button onClick={() => { props.follow(u.id) }}
-                                >Follow</button>}
-                        */}</div>
+                        {u.followed
+                            ? <button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>
+                            : <button onClick={() => { props.follow(u.id) }}
+                            >Follow</button>}
+                    */}</div>
                     </span>
                     <span>
                         <div>name: {u.name}</div>
@@ -40,8 +40,9 @@ const Users = (props) => {
                     </span>
                 </div>
             )
-            }
+            } 
         </div>
-    )
+    
+    }
 }
 export default Users;
