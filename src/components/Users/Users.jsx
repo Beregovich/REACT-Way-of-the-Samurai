@@ -4,15 +4,19 @@ import * as axios from 'axios';
 import userAvatar from '../../assets/images/ava.png'
 
 const Users = (props) => {
-    if (props.users.length === 0) {
-        axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
-            props.setUsers(response)
+    let getUsers = () => {
+        if (props.users.length === 0) {
+            axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
+                props.setUsers(response)
+            }
+            )
         }
-        )
     }
+
     return (
         <div className={classes.users}>
             <h4>USERS</h4>
+            <button onClick={getUsers}>getUsers</button>
             {props.users.map(u =>
                 <div key={u.id} className={classes.user}>
                     <span>
