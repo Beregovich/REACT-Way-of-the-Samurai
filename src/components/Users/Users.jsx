@@ -7,7 +7,7 @@ import userAvatar from '../../assets/images/ava.png'
 class Users extends React.Component {
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
             this.props.setUsers(response)
         }
         )
@@ -21,20 +21,17 @@ class Users extends React.Component {
                         <div>
                             <img src={userAvatar} />
                         </div>
-                        <div>{/*
-                        {u.followed
-                            ? <button onClick={() => { props.unfollow(u.id) }}>Unfollow</button>
-                            : <button onClick={() => { props.follow(u.id) }}
-                            >Follow</button>}
-                    */}</div>
+                        <div>{
+                            u.followed
+                                ? <button onClick={() => { this.props.unfollow(u.id) }}>Unfollow</button>
+                                : <button onClick={() => { this.props.follow(u.id) }}
+                                >Follow</button>
+
+                        }</div>
                     </span>
                     <span>
                         <div>name: {u.name}</div>
-                        <div>email: {u.email}</div>
-                    </span>
-                    <span>
-                        <div>city: {u.address.city}</div>
-                        <div>street: {u.address.street}</div>
+                        <div>status: {u.status}</div>
                     </span>
                 </div>
             )

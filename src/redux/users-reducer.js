@@ -3,24 +3,7 @@ const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET-USERS'
 
 let initialState = {
-    users: [/*
-        {
-            id: 1, photoUrl: 'https://cspromogame.ru//storage/upload_images/avatars/916.jpg',
-            fullName: "Ivan!", status: 'Hello World!', followed: true,
-            location: {
-                country: 'Russis',
-                city: 'Voronezh'
-            }
-        },
-        {
-            id: 2, photoUrl: 'https://cspromogame.ru//storage/upload_images/avatars/916.jpg',
-            fuulName: "Petr!", status: 'Hello JS!', followed: false,
-            location: {
-                country: 'Russis',
-                city: 'Novohopersk'
-            }
-        },
-    */],
+    users: [],
 };
 
 export const usersReducer = (state = initialState, action) => {
@@ -47,7 +30,7 @@ export const usersReducer = (state = initialState, action) => {
         case SET_USERS:
             return {
                 ...state,
-                users: [...state.users, ...action.users.data]
+                users: [...state.users, ...action.users.data.items]
             }
 
         default: return state
