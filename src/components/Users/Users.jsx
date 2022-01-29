@@ -6,13 +6,11 @@ import userAvatar from '../../assets/images/ava.png'
 
 class Users extends React.Component {
 
-    constructor(props) {
-        super(props);
+    componentDidMount() {
         axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
             this.props.setUsers(response)
         }
         )
-
     }
     render() {
         return <div className={classes.users}>
@@ -40,9 +38,9 @@ class Users extends React.Component {
                     </span>
                 </div>
             )
-            } 
+            }
         </div>
-    
+
     }
 }
 export default Users;
