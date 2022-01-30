@@ -18,9 +18,11 @@
 .selectedPage {
   font-weight: bold;
   letter-spacing: 2px;
+  cursor: default;
 }
 
 .pageNumber {
   font-weight: normal;
   letter-spacing: 2px;
+  cursor: pointer;
 }
