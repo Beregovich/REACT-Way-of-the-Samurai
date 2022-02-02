@@ -8,9 +8,9 @@ import { useParams } from 'react-router-dom'
 
 
 let ProfileContainer = (props) => {
-
+    let { userId } = useParams();
     useEffect(() => {
-        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`).then(response => {
+        axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${userId}`).then(response => {
             props.setUserProfile(response.data)
         })
     }, [props]
