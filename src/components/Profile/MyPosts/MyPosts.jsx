@@ -8,7 +8,6 @@ const MyPosts = (props) => {
     let postsElements = props.posts.map(
         (p) => <Post name={p.name} message={p.message} key={p.id} />
     )
-
     let onPostChange = (p) => {
         let text = p.target.value;
         props.updateNewPostText(text);
@@ -21,18 +20,13 @@ const MyPosts = (props) => {
                     value={props.newPostText}
                 />
             </div>
-
             <div>
                 <button onClick={props.addPost}>Add Post</button>
             </div>
-
             <div className={classes.posts}>
                 {postsElements}
             </div>
-
         </div>
-
-
     );
 }
 export default MyPosts;
