@@ -10,9 +10,7 @@ const HeaderContainer = (props) => {
         axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
             withCredentials: true,
         }).then(response => {
-            debugger
             if (response.resultCode === 0) {
-                debugger
                 props.setAuthUserData(response.data.data)
             }
         })
