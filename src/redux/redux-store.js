@@ -3,7 +3,8 @@ import { profileReducer } from './profile-reducer';
 import { usersReducer } from './users-reducer';
 import sidebarReducer from './sidebar-reducer';
 import { authReducer } from './auth-reducer'
-import { combineReducers, createStore } from 'redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk'
 
 
 let reducers = combineReducers({
@@ -14,6 +15,6 @@ let reducers = combineReducers({
     auth: authReducer
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
 export default store;
