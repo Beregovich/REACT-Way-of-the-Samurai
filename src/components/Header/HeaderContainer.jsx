@@ -1,20 +1,14 @@
 import React, { useEffect } from 'react';
 import Header from './Header'
-import * as axios from 'axios';
-import { setAuthUserData } from '../../redux/auth-reducer'
+import { getAuthUserData } from '../../redux/auth-reducer'
 import { connect } from 'react-redux'
+import { authAPI } from '../../api/api';
 
 
 const HeaderContainer = (props) => {
     useEffect(() => {
-        axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
-            withCredentials: true,
-        }).then(response => {
-            if (response.resultCode === 0) {
-                props.setAuthUserData(response.data.data)
-            }
-        })
-    }
+        props.getAuthUserData();
+    }, [props]
     )
     return (
         <Header {...props} />
@@ -27,4 +21,4 @@ const mapStateToProps = (state) => {
 
     })
 }
-export default connect(mapStateToProps, { setAuthUserData })(HeaderContainer);
+export default connect(mapStateToProps, { getAuthUserData })(HeaderContainer);
