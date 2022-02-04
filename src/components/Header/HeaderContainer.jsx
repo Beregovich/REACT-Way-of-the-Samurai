@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Header from './Header'
 import { getAuthUserData } from '../../redux/auth-reducer'
 import { connect } from 'react-redux'
-import { authAPI } from '../../api/api';
 
 
 const HeaderContainer = (props) => {

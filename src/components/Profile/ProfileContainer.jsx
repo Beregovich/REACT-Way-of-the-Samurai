@@ -8,9 +8,14 @@ import { useParams } from 'react-router-dom'
 let ProfileContainer = (props) => {
     let { userId } = useParams();
     useEffect(() => {
-        if (!userId) { userId = 2 }
-        props.getUserProfile(userId)
-    }, [props, userId])
+        if (!userId) {
+            props.getUserProfile(2)
+        }
+        else {
+            props.getUserProfile(userId)
+        }
+
+    }, [])
     return <Profile {...props} profile={props.profile} />
 }
 

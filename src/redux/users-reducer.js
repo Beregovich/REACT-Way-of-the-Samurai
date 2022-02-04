@@ -23,6 +23,7 @@ export const usersReducer = (state = initialState, action) => {
             return {
                 ...state,
                 users: state.users.map((u) => {
+                    debugger
                     if (u.id === action.userId) {
                         return { ...u, followed: true }
                     } else { return { ...u } }
