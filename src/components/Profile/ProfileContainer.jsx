@@ -2,14 +2,12 @@ import React, { useEffect } from 'react'
 import Profile from './Profile'
 import { connect } from 'react-redux';
 import { getUserProfile } from '../../redux/profile-reducer'
-import { useParams, useNavigate } from 'react-router-dom'
-
+import { useParams } from 'react-router-dom'
+import { withAuthRedirect } from '../../hoc/withAuthRedirect'
 
 let ProfileContainer = (props) => {
-    let navigate = useNavigate();
     let { userId } = useParams();
     useEffect(() => {
-        if (props.isAuth !== true) return navigate("/login")
         if (!userId) {
             props.getUserProfile(2)
         }
@@ -21,6 +19,8 @@ let ProfileContainer = (props) => {
 
     return <Profile {...props} profile={props.profile} />
 }
+
+//let AuthRedirectComponent = withAuthRedirect(ProfileContainer)
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,

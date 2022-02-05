@@ -2,8 +2,10 @@ import React from 'react';
 import classes from './ProdileInfo.module.css'
 import Preloader from '../../common/Preloader/Preloader'
 import userAvatar from '../../../assets/images/ava.png'
+import ProfileStatus from './ProfileStatus'
 
 function ProdileInfo(props) {
+
     if (!props.profile) { return <Preloader /> }
     else return (
         <div>
@@ -13,6 +15,7 @@ function ProdileInfo(props) {
             <div>
                 <span><img src={props.profile.photos.large ? props.profile.photos.large : userAvatar} /></span><span><h2>{props.profile.fullName}</h2></span>
             </div>
+            <ProfileStatus {...props} />
             <div>
                 {props.profile.aboutMe}
 
