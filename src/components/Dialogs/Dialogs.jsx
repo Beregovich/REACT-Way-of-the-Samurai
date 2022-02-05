@@ -4,7 +4,10 @@ import classes from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message'
 
+
+
 const Dialogs = (props) => {
+
     let state = props.dialogsPage;
 
     let dialogsElements = state.dialogs.map(
@@ -21,6 +24,7 @@ const Dialogs = (props) => {
         props.updateNewMessageBody(body)
     }
     return (
+
         <div className={classes.dialogs}>
 
             <div className={classes.dialogsItems}>
@@ -40,6 +44,7 @@ const Dialogs = (props) => {
 
         </div>
     )
+
 }
 
 export default Dialogs;
