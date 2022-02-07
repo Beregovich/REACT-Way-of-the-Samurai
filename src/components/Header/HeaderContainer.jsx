@@ -3,12 +3,11 @@ import Header from './Header'
 import { getAuthUserData } from '../../redux/auth-reducer'
 import { connect } from 'react-redux'
 
-
 const HeaderContainer = (props) => {
     useEffect(() => {
         props.getAuthUserData();
-    }, [props]
-    )
+    })
+
     return (
         <Header {...props} />
     )

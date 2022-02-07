@@ -14,7 +14,6 @@ let initialState = {
         { id: 4, name: "Serezha" },
     ],
     newMessageBody: ""
-
 }
 
 export const dialogsReducer = (state = initialState, action) => {
@@ -37,6 +36,7 @@ export const dialogsReducer = (state = initialState, action) => {
         default: return state
     }
 }
+
 export const updateNewMessageBodyCreator = (body) => {
     return (
         {

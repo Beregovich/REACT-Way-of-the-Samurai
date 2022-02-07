@@ -11,7 +11,7 @@ let ProfileContainer = (props) => {
     let { userId } = useParams();
     useEffect(() => {
         if (!userId) {
-            props.getUserProfile(2)
+            props.getUserProfile(22155)
         }
         else {
             props.getUserProfile(userId)
@@ -23,14 +23,14 @@ let ProfileContainer = (props) => {
     return <Profile {...props} profile={props.profile} status={props.status} updateUserStatus={props.updateUserStatus} />
 }
 
-//let AuthRedirectComponent = withAuthRedirect(ProfileContainer)
+let AuthRedirectComponent = withAuthRedirect(ProfileContainer)
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
     isAuth: state.auth.isAuth,
     status: state.profilePage.status
 })
-export default connect(mapStateToProps, { getUserProfile, getUserStatus, updateUserStatus })(ProfileContainer)
+export default connect(mapStateToProps, { getUserProfile, getUserStatus, updateUserStatus })(AuthRedirectComponent)
 
 
 

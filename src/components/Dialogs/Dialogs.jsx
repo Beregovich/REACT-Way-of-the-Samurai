@@ -4,8 +4,6 @@ import classes from './Dialogs.module.css';
 import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message'
 
-
-
 const Dialogs = (props) => {
 
     let state = props.dialogsPage;
@@ -20,13 +18,11 @@ const Dialogs = (props) => {
         props.sendMessage();
     }
     let onNewMessageChange = (e) => {
-        let body = e.target.value;
-        props.updateNewMessageBody(body)
+        props.updateNewMessageBody(e.target.value)
     }
     return (
 
         <div className={classes.dialogs}>
-
             <div className={classes.dialogsItems}>
                 {dialogsElements}
             </div>
@@ -44,7 +40,5 @@ const Dialogs = (props) => {
 
         </div>
     )
-
 }
-
 export default Dialogs;
